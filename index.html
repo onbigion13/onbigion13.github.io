@@ -8,12 +8,22 @@
     <style>
         body {
             font-family: "Segoe UI", sans-serif;
-            margin: 2rem;
+            margin: 0;
             background: #f8f9fa;
             color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #1e1e1e;
+            color: #ddd;
+        }
+        .container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
         }
         h1, h2, h3 {
-            color: #2c3e50;
+            color: inherit;
         }
         a {
             color: #007acc;
@@ -23,12 +33,47 @@
             text-decoration: underline;
         }
         ul {
-            padding-left: 1.2em;
+            padding-left: 1.5em;
+        }
+        nav {
+            background: #007acc;
+            padding: 1rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            margin-left: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .toggle-btn {
+            background: white;
+            color: #007acc;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-<h1>This is G.t. 霁天 👋.</h1>
+    <nav>
+        <div>🌌 G.t. 霁天</div>
+        <div>
+            <a href="#likes">Likes</a>
+            <a href="#coding">Coding</a>
+            <a href="#current">Current</a>
+            <a href="#past">Past</a>
+            <a href="#contact">Contact</a>
+            <button class="toggle-btn" onclick="toggleTheme()">🌓 Theme</button>
+        </div>
+    </nav>
+    <div class="container">
+    <h1>This is G.t. 霁天 👋.</h1>
 
 <p><strong>Be a great man, be a nobody</strong>.</p>
 
@@ -86,5 +131,11 @@
 
 <p>​   📘 <a href="https://www.facebook.com/onbigion13/">霁天(@onbigion13)</a></p>
 
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
