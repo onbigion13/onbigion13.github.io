@@ -7,31 +7,35 @@
     <style>
         :root {
             color-scheme: light dark;
-            --bg: #f5f7fb;
-            --surface: rgba(255, 255, 255, 0.82);
-            --nav: rgba(255, 255, 255, 0.92);
-            --text: #1f2937;
-            --muted: #475569;
-            --accent: #0f766e;
-            --accent-strong: #115e59;
-            --border: rgba(15, 118, 110, 0.18);
-            --shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
-            --hero-1: #dff6f0;
-            --hero-2: #eef4ff;
+            --bg: #ffffff;
+            --surface: #f6f8fa;
+            --nav: rgba(255, 255, 255, 0.96);
+            --text: #1f2328;
+            --muted: #59636e;
+            --accent: #0969da;
+            --accent-strong: #0550ae;
+            --border: #d0d7de;
+            --code-bg: #eff1f3;
+            --hero-1: #f6f8fa;
+            --hero-2: #ddf4ff;
+            --hero-accent-1: rgba(9, 105, 218, 0.10);
+            --hero-accent-2: rgba(84, 174, 255, 0.08);
         }
 
         body.dark-mode {
-            --bg: #08131a;
-            --surface: rgba(9, 20, 28, 0.88);
-            --nav: rgba(9, 20, 28, 0.94);
-            --text: #dce9ee;
-            --muted: #9fb3bf;
-            --accent: #5eead4;
-            --accent-strong: #99f6e4;
-            --border: rgba(94, 234, 212, 0.18);
-            --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-            --hero-1: #0f2b33;
-            --hero-2: #13203a;
+            --bg: #0d1117;
+            --surface: #161b22;
+            --nav: rgba(13, 17, 23, 0.96);
+            --text: #f0f6fc;
+            --muted: #b1bac4;
+            --accent: #58a6ff;
+            --accent-strong: #79c0ff;
+            --border: #30363d;
+            --code-bg: #21262d;
+            --hero-1: #161b22;
+            --hero-2: #0d1117;
+            --hero-accent-1: rgba(31, 111, 235, 0.22);
+            --hero-accent-2: rgba(88, 166, 255, 0.10);
         }
 
         * {
@@ -109,10 +113,15 @@
             font-weight: 700;
         }
 
+        .toggle-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent-strong);
+        }
+
         .hero {
             border-bottom: 1px solid var(--border);
             background:
-                linear-gradient(135deg, rgba(15, 118, 110, 0.10), rgba(59, 130, 246, 0.08)),
+                linear-gradient(135deg, var(--hero-accent-1), var(--hero-accent-2)),
                 var(--surface);
         }
 
@@ -178,7 +187,7 @@
         }
 
         code {
-            background: rgba(148, 163, 184, 0.16);
+            background: var(--code-bg);
             border-radius: 0.4rem;
             padding: 0.1rem 0.35rem;
             color: var(--text);
